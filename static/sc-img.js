@@ -8,6 +8,7 @@ template.innerHTML = `
             background-color: lightcoral;
             position: relative;
             background-size: 100% 100%;
+            image-rendering: pixelated;
         }
 
         img{
@@ -15,6 +16,14 @@ template.innerHTML = `
             position: absolute;
             top: 0;
             left: 0;
+            animation-name: fade-in;
+            animation-duration: 0.5s;
+        }
+
+        @keyframes fade-in{
+            from{
+                opacity: 0;
+            }
         }
     </style>
 `;

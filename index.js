@@ -21,7 +21,7 @@ const im = require('gm').subClass({
 
 const app = express();
 
-const thumbSize = 8; //blurred img resolution
+const thumbSize = 16; //blurred or pixelated img resolution
 
 app.get('/', async (req, res) => {
     let filepath = req.url;
@@ -65,4 +65,4 @@ app.get('/', async (req, res) => {
 });
 
 app.use(express.static('static'));
-app.listen(8080);
+app.listen(8080, () => console.log('Server started on port 8080'));
